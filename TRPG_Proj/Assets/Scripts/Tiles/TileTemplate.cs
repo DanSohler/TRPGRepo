@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class TileTemplate : MonoBehaviour
 {
+    [SerializeField] private CameraScript camScript;
     [SerializeField] protected GameObject indiPlane;
+
+    private void Awake()
+    {
+        camScript = FindObjectOfType<CameraScript>();
+    }
+
     void OnMouseEnter()
     {
-        indiPlane.SetActive(true);
+        if (camScript.isRotatingCam == false)
+        {
+            indiPlane.SetActive(true);
+        }
     }
 
     void OnMouseExit()

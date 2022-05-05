@@ -12,8 +12,30 @@ public class CameraScript : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    [HideInInspector] public bool isRotatingCam = false;
+
     private void Update()
     {
+            if (Input.GetKey("left shift"))
+            {
+                 Cursor.lockState = CursorLockMode.Locked;
+                 Cursor.visible = false;
+                 RotateCam();
+                 isRotatingCam = true;
+            }
+            else
+            {
+                 Cursor.lockState = CursorLockMode.None;
+                 Cursor.visible = true;
+                 isRotatingCam = false;
+        }
+
+
+    }
+
+    void RotateCam()
+    {
+
         // gets mouse input
         float mouseX = Input.GetAxisRaw("Horizontal") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Vertical") * Time.deltaTime * sensY;

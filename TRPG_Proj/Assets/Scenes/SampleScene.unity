@@ -1563,8 +1563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8771930836aa74749864290d9769c491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 45
-  sensY: 45
+  sensX: 180
+  sensY: 180
   orientation: {fileID: 650482707}
   isRotatingCam: 0
 --- !u!1001 &658373245

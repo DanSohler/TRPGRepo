@@ -29,21 +29,19 @@ public class CameraScript : MonoBehaviour
                  Cursor.visible = true;
                  isRotatingCam = false;
         }
-
-
     }
 
     void RotateCam()
     {
 
         // gets mouse input
-        float mouseX = Input.GetAxisRaw("Horizontal") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Vertical") * Time.deltaTime * sensY;
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
 
-        yRotation -= mouseX;
+        yRotation += mouseX;
 
-        xRotation += mouseY;
+        xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, 0f, 0f);
 
         // rotate cam and orientation

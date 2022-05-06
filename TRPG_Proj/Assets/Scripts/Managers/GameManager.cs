@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameStates> OnGameStateChanged;
 
-    private void Awake()
+    void Awake()
     {
         Instance = this; 
     }
@@ -44,12 +44,14 @@ public class GameManager : MonoBehaviour
         OnGameStateChanged?.Invoke(newState);
     }
 
-    public enum GameStates
-    {
+    
+}
+
+public enum GameStates
+{
     StartRound,
     PlayerRound,
     EnemyRound,
     Victory,
     Lose
-    };
-}
+};

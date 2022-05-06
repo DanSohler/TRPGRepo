@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class UnitTemplate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TileTemplate occupiedTile;
+    public Faction faction;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

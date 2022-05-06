@@ -99,4 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae395c66c3f29744ba979ed80de5c391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camScript: {fileID: 0}
   indiPlane: {fileID: 1742729905581589335}
+  isWalkable: 1
+  occupiedUnit: {fileID: 0}

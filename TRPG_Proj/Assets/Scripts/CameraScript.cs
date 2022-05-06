@@ -16,6 +16,8 @@ public class CameraScript : MonoBehaviour
 
     private void Update()
     {
+        
+
             if (Input.GetKey("left shift"))
             {
                  Cursor.lockState = CursorLockMode.Locked;
@@ -28,7 +30,7 @@ public class CameraScript : MonoBehaviour
                  Cursor.lockState = CursorLockMode.None;
                  Cursor.visible = true;
                  isRotatingCam = false;
-            }
+            } 
     }
 
     void RotateCam()
